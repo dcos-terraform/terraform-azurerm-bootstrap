@@ -2,7 +2,9 @@
 # Instance Variables
 ###
 # Number of Instance
-variable "num_masters" {}
+variable "num_bootstrap" {
+  default = 1
+}
 
 # Location (region)
 variable "location" {}

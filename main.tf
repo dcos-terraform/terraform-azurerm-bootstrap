@@ -1,6 +1,6 @@
 provider "azurerm" {}
 
-module "master-nsg" {
+module "bootstrap-nsg" {
   source  = "dcos-terraform/nsg/azurerm"
   version = "~> 0.0"
 
@@ -8,7 +8,7 @@ module "master-nsg" {
     azurerm = "azurerm"
   }
 
-  dcos_role                 = "master"
+  dcos_role                 = "bootstrap"
   location                  = "${var.location}"
   resource_group_name       = "${var.resource_group_name}"
   tags                      = "${var.tags}"
@@ -16,23 +16,7 @@ module "master-nsg" {
   network_security_group_id = "${var.network_security_group_id}"
 }
 
-module "master-lb" {
-  source  = "dcos-terraform/nsg/azurerm"
-  version = "~> 0.0"
-
-  providers = {
-    azurerm = "azurerm"
-  }
-
-  dcos_role                 = "master"
-  location                  = "${var.location}"
-  resource_group_name       = "${var.resource_group_name}"
-  tags                      = "${var.tags}"
-  name_prefix               = "${var.name_prefix}"
-  network_security_group_id = "${var.network_security_group_id}"
-}
-
-module "dcos-master-instances" {
+module "dcos-bootstrap-instances" {
   source  = "dcos-terraform/instance/azurerm"
   version = "~> 0.0"
 
@@ -40,7 +24,7 @@ module "dcos-master-instances" {
     azurerm = "azurerm"
   }
 
-  num_instances            = "${var.num_masters}"
+  num_instances            = "${var.num_bootstrap}"
   location                 = "${var.location}"
   name_prefix              = "${var.name_prefix}"
   instance_type            = "${var.instance_type}"
