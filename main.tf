@@ -8,12 +8,11 @@ module "bootstrap-nsg" {
     azurerm = "azurerm"
   }
 
-  dcos_role                 = "bootstrap"
-  location                  = "${var.location}"
-  resource_group_name       = "${var.resource_group_name}"
-  tags                      = "${var.tags}"
-  name_prefix               = "${var.name_prefix}"
-  network_security_group_id = "${var.network_security_group_id}"
+  dcos_role           = "bootstrap"
+  location            = "${var.location}"
+  resource_group_name = "${var.resource_group_name}"
+  tags                = "${var.tags}"
+  name_prefix         = "${var.name_prefix}"
 }
 
 module "dcos-bootstrap-instances" {
