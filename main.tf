@@ -34,7 +34,7 @@ module "dcos-bootstrap-instances" {
   disk_type                 = "${var.disk_type}"
   disk_size                 = "${var.disk_size}"
   resource_group_name       = "${var.resource_group_name}"
-  network_security_group_id = "${module.bootstrap-nsg.nsg_name}"
+  network_security_group_id = "${module.bootstrap-nsg.nsg_id}"
   user_data                 = "${var.user_data}"
   admin_username            = "${var.admin_username}"
   public_ssh_key            = "${var.public_ssh_key}"
