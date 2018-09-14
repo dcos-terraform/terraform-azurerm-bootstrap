@@ -67,3 +67,8 @@ output "private_ips" {
 output "public_ips" {
   value = ["${module.dcos-bootstrap-instances.public_ips}"]
 }
+
+# Returns the ID of the prereq script
+output "prereq_id" {
+  value = "${module.dcos-bootstrap-instances.prereq_id}"
+}
