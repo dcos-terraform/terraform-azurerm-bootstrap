@@ -1,3 +1,23 @@
+/**
+ * [![Build Status](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-azurerm-bootstrap/job/master/badge/icon)](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-azurerm-bootstrap/job/master/)
+ * ![HashiCorp's Terraform](https://cultivatedops-static.s3.amazonaws.com/thirdparty/terraform/logo-50.png)
+ *
+ * This repository is a [Terraform](https://terraform.io/) Module for azurerm virtual machine instances
+ *
+ * The module creates AzureRM virtual machine instances
+ *
+ * # Usage
+ *
+ * Add the module to your Terraform resources like so:
+ *
+ *```
+ * module "terraform-azurerm-bootstrap" {
+ *   source = "./terraform-module-terraform-azurerm-instance"
+ *   arg1 = "foo"
+ * }
+ *```
+ */
+
 provider "azurerm" {}
 
 module "bootstrap-nsg" {
