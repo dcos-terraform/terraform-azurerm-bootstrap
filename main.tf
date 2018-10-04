@@ -22,21 +22,6 @@
 
 provider "azurerm" {}
 
-module "bootstrap-nsg" {
-  source  = "dcos-terraform/nsg/azurerm"
-  version = "~> 0.0"
-
-  providers = {
-    azurerm = "azurerm"
-  }
-
-  dcos_role           = "bootstrap"
-  location            = "${var.location}"
-  resource_group_name = "${var.resource_group_name}"
-  tags                = "${var.tags}"
-  name_prefix         = "${var.name_prefix}"
-}
-
 module "dcos-bootstrap-instances" {
   source  = "dcos-terraform/instance/azurerm"
   version = "~> 0.0"
