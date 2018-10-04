@@ -34,6 +34,7 @@ module "dcos-bootstrap-instance" {
 | instance_type | instance type | string | - | yes |
 | location | location | string | - | yes |
 | name_prefix | Cluster Name | string | - | yes |
+| network_security_group_id | network security group id | string | - | yes |
 | num_bootstrap | num bootstrap | string | `1` | no |
 | public_ssh_key | public ssh key | string | - | yes |
 | resource_group_name | resource group name | string | - | yes |
