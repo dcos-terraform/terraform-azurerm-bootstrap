@@ -1,11 +1,10 @@
 [![Build Status](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-azurerm-bootstrap/job/master/badge/icon)](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-azurerm-bootstrap/job/master/)
+Azure DC/OS Bootstrap Instance
+==============================
+The module creates AzureRM virtual machine instances
 
-The module creates AzureRM virtual machine instance
-
-# Azure DC/OS Bootstrap Instance
-This module creates typical bootstrap instance used by DC/OS
-
-## EXAMPLE
+EXAMPLE
+-------
 
 ```hcl
 module "dcos-bootstrap-instance" {
@@ -16,9 +15,9 @@ module "dcos-bootstrap-instance" {
   subnet_ids = "string-myid"
   resource_group_name = "example"
   public_ssh_key = "my-ssh-key"
-  ...
 }
 ```
+
 
 ## Inputs
 
