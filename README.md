@@ -25,6 +25,7 @@ module "dcos-bootstrap-instance" {
 |------|-------------|:----:|:-----:|:-----:|
 | admin_username | admin username | string | - | yes |
 | allow_stopping_for_update | If true, allows Terraform to stop the instance to update its properties | string | `true` | no |
+| custom_data | User data to be used on these instances (cloud-init) | string | `` | no |
 | dcos_instance_os | Operating system to use. Instead of using your own AMI you could use a provided OS. | string | - | yes |
 | dcos_version | Specifies which DC/OS version instruction to use. Options: 1.9.0, 1.8.8, etc. See dcos_download_path or dcos_version tree for a full list. | string | - | yes |
 | disk_size | disk size | string | - | yes |
@@ -41,25 +42,13 @@ module "dcos-bootstrap-instance" {
 | ssh_private_key_filename | Path to the SSH private key | string | `/dev/null` | no |
 | subnet_id | Subnet ID | string | - | yes |
 | tags | Add custom tags to all resources | map | `<map>` | no |
-| user_data | User data to be used on these instances (cloud-init) | string | `` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| admin_username | SSH User |
-| dcos_instance_os | Tested OSes to install with prereq |
-| dcos_version | DCOS Version for prereq install |
-| disk_size | Disk Size in GB |
-| disk_type | Disk Type to Leverage |
-| image | Source image to boot from |
-| instance_type | Instance Type |
-| name_prefix | Cluster Name |
-| num_bootstrap | Number of Instance |
-| prereq_id | Returns the ID of the prereq script |
-| private_ips | Private IP Addresses |
-| public_ips | Public IP Addresses |
-| public_ssh_key | SSH Public Key |
-| resource_group_name | Resource Group Name |
-| user_data | Customer Provided Userdata |
+| admin_username | admin username |
+| prereq_id | prereq id |
+| private_ips | List of private ip addresses created by this module |
+| public_ips | List of public ip addresses created by this module |
 
