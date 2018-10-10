@@ -30,7 +30,7 @@ module "dcos-bootstrap-instance" {
 | disk_size | disk size | string | - | yes |
 | disk_type | Disk Type to Leverage. | string | `Standard_LRS` | no |
 | hostname_format | Format the hostname inputs are index+1, region, cluster_name | string | `bootstrap-%[1]d-%[2]s` | no |
-| image | image | string | - | yes |
+| image | A storage_image_reference reference. | map | `<map>` | no |
 | instance_type | instance type | string | - | yes |
 | location | location | string | - | yes |
 | name_prefix | Cluster Name | string | - | yes |
