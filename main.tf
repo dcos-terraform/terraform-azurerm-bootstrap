@@ -30,7 +30,7 @@ module "dcos-bootstrap-instances" {
     azurerm = "azurerm"
   }
 
-  num_instances             = "${var.num_bootstrap}"
+  num                       = "${var.num_bootstrap}"
   location                  = "${var.location}"
   name_prefix               = "${var.name_prefix}"
   instance_type             = "${var.instance_type}"
@@ -44,7 +44,7 @@ module "dcos-bootstrap-instances" {
   network_security_group_id = "${var.network_security_group_id}"
   custom_data               = "${var.custom_data}"
   admin_username            = "${var.admin_username}"
-  public_ssh_key            = "${var.public_ssh_key}"
+  ssh_public_key            = "${var.ssh_public_key}"
   tags                      = "${var.tags}"
   hostname_format           = "${var.hostname_format}"
   subnet_id                 = "${var.subnet_id}"
