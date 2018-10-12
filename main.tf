@@ -30,7 +30,7 @@ module "dcos-bootstrap-instances" {
     azurerm = "azurerm"
   }
 
-  num                       = "${var.num_bootstrap}"
+  num                       = 1
   location                  = "${var.location}"
   name_prefix               = "${var.name_prefix}"
   vm_size                   = "${var.vm_size}"

@@ -35,7 +35,6 @@ module "dcos-bootstrap-instance" {
 | location | location | string | - | yes |
 | name_prefix | Cluster Name | string | - | yes |
 | network_security_group_id | network security group id | string | - | yes |
-| num_bootstrap | num bootstrap | string | `1` | no |
 | resource_group_name | resource group name | string | - | yes |
 | ssh_private_key_filename | Path to the SSH private key | string | `/dev/null` | no |
 | ssh_public_key | SSH public key in authorized keys format (e.g. 'ssh-rsa ..') to be used with the instances. Make sure you added this key to your ssh-agent. | string | - | yes |
@@ -49,6 +48,6 @@ module "dcos-bootstrap-instance" {
 |------|-------------|
 | admin_username | admin username |
 | prereq_id | prereq id |
-| private_ips | List of private ip addresses created by this module |
-| public_ips | List of public ip addresses created by this module |
+| private_ip | List of private ip addresses created by this module |
+| public_ip | List of public ip addresses created by this module |
 

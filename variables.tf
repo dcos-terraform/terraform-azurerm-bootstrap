@@ -1,12 +1,6 @@
 ###
 # Instance Variables
 ###
-# Number of Instance
-variable "num_bootstrap" {
-  description = "num bootstrap"
-  default     = 1
-}
-
 # Location (region)
 variable "location" {
   description = "location"
