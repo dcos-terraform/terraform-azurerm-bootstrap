@@ -1,5 +1,5 @@
 output "admin_username" {
-  description = "admin username"
+  description = "Security Group Id"
   value       = "${module.dcos-bootstrap-instances.admin_username}"
 }
 
@@ -14,6 +14,6 @@ output "public_ip" {
 }
 
 output "prereq_id" {
-  description = "prereq id"
+  description = "Prereq id used for dependency"
   value       = "${module.dcos-bootstrap-instances.prereq_id}"
 }
