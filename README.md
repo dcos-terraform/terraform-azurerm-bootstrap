@@ -46,7 +46,7 @@ module "dcos-bootstrap-instance" {
 
 | Name | Description |
 |------|-------------|
-| admin_username | Security Group Id |
+| admin_username | SSH User |
 | prereq_id | Prereq id used for dependency |
 | private_ip | List of private ip addresses created by this module |
 | public_ip | List of public ip addresses created by this module |

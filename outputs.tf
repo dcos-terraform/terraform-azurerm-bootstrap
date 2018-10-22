@@ -1,5 +1,5 @@
 output "admin_username" {
-  description = "Security Group Id"
+  description = "SSH User"
   value       = "${module.dcos-bootstrap-instances.admin_username}"
 }
 
