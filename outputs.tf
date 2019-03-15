@@ -18,6 +18,11 @@ output "instance_nic_ids" {
   value       = "${module.dcos-bootstrap-instances.instance_nic_ids[0]}"
 }
 
+output "ip_configuration_names" {
+  description = "List of instance nic ids created by this module"
+  value       = "${module.dcos-bootstrap-instances.ip_configuration_names[0]}"
+}
+
 output "prereq_id" {
   description = "Prereq id used for dependency"
   value       = "${module.dcos-bootstrap-instances.prereq_id}"
