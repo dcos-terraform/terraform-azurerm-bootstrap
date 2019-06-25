@@ -30,9 +30,10 @@ module "dcos-bootstrap-instances" {
     azurerm = "azurerm"
   }
 
-  num                       = 1
-  location                  = "${var.location}"
+  cluster_name              = "${var.cluster_name}"
   name_prefix               = "${var.name_prefix}"
+  num                       = "${var.num_bootstrap}"
+  location                  = "${var.location}"
   vm_size                   = "${var.vm_size}"
   dcos_version              = "${var.dcos_version}"
   dcos_instance_os          = "${var.dcos_instance_os}"
