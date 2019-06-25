@@ -47,7 +47,7 @@ module "dcos-bootstrap-instance" {
 
 | Name | Description |
 |------|-------------|
-| os\_user | The OS user to be used |
+| admin\_username | SSH User |
 | private\_ip | List of private ip addresses created by this module |
 | public\_ip | List of public ip addresses created by this module |
 
