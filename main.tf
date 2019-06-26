@@ -43,7 +43,7 @@ module "dcos-bootstrap-instances" {
   disk_size                 = "${var.disk_size}"
   resource_group_name       = "${var.resource_group_name}"
   network_security_group_id = "${var.network_security_group_id}"
-  custom_data               = "${var.custom_data}"
+  custom_data               = "${var.custom_data == "" && var.image == "" ? file("${path.module}/cloudinit.tpl") : var.custom_data}"
   admin_username            = "${var.admin_username}"
   ssh_public_key            = "${var.ssh_public_key}"
   tags                      = "${var.tags}"
