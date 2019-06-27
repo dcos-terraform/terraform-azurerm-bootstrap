@@ -14,7 +14,7 @@ module "dcos-bootstrap-instance" {
   admin_username = "admin"
   subnet_ids = "string-myid"
   resource_group_name = "example"
-  public_ssh_key = "my-ssh-key"
+  public_ssh_key = "~/.ssh/id_rsa.pub"
 }
 ```
 
@@ -28,8 +28,8 @@ module "dcos-bootstrap-instance" {
 | disk\_size | Disk Size in GB | string | n/a | yes |
 | location | Azure Region | string | n/a | yes |
 | network\_security\_group\_id | Security Group Id | string | n/a | yes |
+| public\_ssh\_key | SSH Public Key | string | n/a | yes |
 | resource\_group\_name | Name of the azure resource group | string | n/a | yes |
-| ssh\_public\_key | SSH public key in authorized keys format (e.g. 'ssh-rsa ..') to be used with the instances. Make sure you added this key to your ssh-agent. | string | n/a | yes |
 | subnet\_id | Subnet ID | string | n/a | yes |
 | vm\_size | Azure virtual machine size | string | n/a | yes |
 | allow\_stopping\_for\_update | If true, allows Terraform to stop the instance to update its properties | string | `"true"` | no |
