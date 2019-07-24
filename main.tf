@@ -10,7 +10,7 @@
  *```hcl
  * module "dcos-bootstrap-instance" {
  *   source  = "dcos-terraform/bootstrap/azurerm"
- *   version = "~> 0.1"
+ *   version = "~> 0.1.0"
  *
  *   admin_username = "admin"
  *   subnet_ids = "string-myid"
