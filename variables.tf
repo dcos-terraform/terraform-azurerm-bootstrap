@@ -34,7 +34,7 @@ variable "ssh_private_key_filename" {
 
 variable "image" {
   description = "Source image to boot from"
-  type        = "map"
+  type        = map(string)
   default     = {}
 }
 
@@ -71,7 +71,7 @@ variable "allow_stopping_for_update" {
 
 variable "tags" {
   description = "Add custom tags to all resources"
-  type        = "map"
+  type        = map(string)
   default     = {}
 }
 
@@ -92,3 +92,4 @@ variable "avset_platform_fault_domain_count" {
   description = "Availability set platform fault domain count, differs from location to location"
   default     = 3
 }
+
