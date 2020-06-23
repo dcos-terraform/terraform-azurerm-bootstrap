@@ -22,6 +22,8 @@
  */
 
 provider "azurerm" {
+  version = "~> 2.0"
+  features {}
 }
 
 module "dcos-bootstrap-instances" {
